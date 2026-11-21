@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Biuro podróży dla osób z niepełnosprawnością - wycieczki zagraniczne bez barier | Accessible Poland Tours</title>
+<meta name="description" content="Wycieczki zagraniczne, wczasy i wyjazdy szyte na miarę dla osób z niepełnosprawnością i seniorów. Hotele, łazienki i transport sprawdzone przed wyjazdem. Warszawa, cała Polska.">
+<meta name="theme-color" content="#0A2CA9">
+<link rel="preload" href="fonts/atkinson-hyperlegible-latin-700-r.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="img/hero-m-640.webp" media="(max-width:700px)" imagesrcset="img/hero-m-640.webp 640w, img/hero-m-1080.webp 1080w" imagesizes="100vw">
+<link rel="preload" as="image" href="img/hero-1600.webp" media="(min-width:701px)" imagesrcset="img/hero-960.webp 960w, img/hero-1600.webp 1600w, img/hero-2560.webp 2560w" imagesizes="100vw">
+<link rel="icon" href="img/znak.svg" type="image/svg+xml">
+<style>
+@font-face{font-family:Atkinson;src:url(fonts/atkinson-hyperlegible-latin-400-r.woff2) format("woff2");font-weight:400;font-display:swap;unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B7,U+00BB,U+00D3,U+00F3}
+@font-face{font-family:Atkinson;src:url(fonts/atkinson-hyperlegible-latin-ext-400-pl.woff2) format("woff2");font-weight:400;font-display:swap;unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C,U+2013-2014,U+201C-201E,U+2026}
+@font-face{font-family:Atkinson;src:url(fonts/atkinson-hyperlegible-latin-700-r.woff2) format("woff2");font-weight:700;font-display:swap;unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B7,U+00BB,U+00D3,U+00F3}
+@font-face{font-family:Atkinson;src:url(fonts/atkinson-hyperlegible-latin-ext-700-pl.woff2) format("woff2");font-weight:700;font-display:swap;unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C,U+2013-2014,U+201C-201E,U+2026}
+@font-face{font-family:Cyfry;src:url(fonts/ubuntu-400-cyfry.woff2) format("woff2");font-weight:400;font-display:swap;unicode-range:U+0030-0039}
+@font-face{font-family:Cyfry;src:url(fonts/ubuntu-latin-500-r.woff2) format("woff2");font-weight:700;font-display:swap;unicode-range:U+0030-0039}
+:root{--niebieski:#0A2CA9;--niebieski-c:#0A1A4F;--morski:#0B6B66;--morski-h:#08524E;--tekst:#14182B;--szary:#4A5068;--tlo2:#F2F4F8;--linia:#D9DEEA}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;font-family:Cyfry,Atkinson,system-ui,"Segoe UI",Arial,sans-serif;font-size:18px;line-height:1.6;color:var(--tekst);background:#fff}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--niebieski)}
+h1,h2,h3{line-height:1.2;margin:0;font-weight:700;letter-spacing:-.01em}
+h2{font-size:clamp(28px,3.4vw,42px);color:var(--niebieski-c)}
+h3{font-size:22px}
+p{margin:0 0 1em}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px;top:8px;background:#fff;padding:10px 16px;z-index:99}
+.skip:focus{left:8px}
+:focus-visible{outline:3px solid #F2B400;outline-offset:3px}
+svg.ik{width:1em;height:1em;fill:currentColor;flex:none}
+
+/* naglowek */
+.top{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--linia)}
+.top-in{max-width:1280px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:24px;min-height:72px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--niebieski);flex:none}
+.logo svg{width:50px;height:50px}
+.logo-t{display:flex;flex-direction:column;line-height:1.1}
+.logo-t b{font-size:19px;letter-spacing:.01em}
+.logo-t small{font-size:13.5px;color:var(--morski);font-weight:700}
+.nav{display:flex;gap:4px;margin-left:auto}
+.nav a{color:var(--tekst);text-decoration:none;font-weight:700;font-size:17px;padding:10px 12px;border-radius:6px}
+.nav a:hover{background:var(--tlo2);color:var(--niebieski)}
+.nav a.akt{color:var(--niebieski);box-shadow:inset 0 -3px 0 var(--niebieski);border-radius:0}
+.top-tel{display:flex;align-items:center;gap:8px;font-weight:700;font-size:18px;text-decoration:none;color:#fff;background:var(--morski);padding:11px 16px;border-radius:8px;white-space:nowrap}
+.top-tel:hover{background:var(--morski-h)}
+.jezyk{font-weight:700;font-size:15px;color:var(--szary);text-decoration:none;border:1px solid var(--linia);padding:7px 9px;border-radius:6px}
+.burger{display:none;margin-left:auto;width:52px;height:52px;border:1px solid var(--linia);border-radius:8px;background:#fff;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:6px}
+.burger span{display:block;width:24px;height:2.5px;background:var(--niebieski-c);border-radius:2px}
+.menu-mob{border-top:1px solid var(--linia);background:#fff;padding:8px 20px 22px}
+.menu-mob[hidden]{display:none}
+.menu-mob a{display:block;padding:14px 4px;font-size:20px;font-weight:700;color:var(--tekst);text-decoration:none;border-bottom:1px solid var(--linia)}
+.menu-mob .btn{margin-top:18px;width:100%;justify-content:center;border:0}
+@media (max-width:1080px){.nav,.top-tel span.dl{display:none}}
+@media (max-width:860px){.nav,.top-tel,.jezyk{display:none}.burger{display:flex}}
+@media (max-width:400px){.top-in{padding:10px 14px;gap:10px}.logo{gap:9px}.logo svg{width:42px;height:42px}.logo-t b{font-size:16.5px}.logo-t small{font-size:12.5px}.burger{width:48px;height:48px}}
+
+/* przyciski */
+.btn{display:inline-flex;align-items:center;gap:10px;font:inherit;font-weight:700;font-size:19px;text-decoration:none;padding:15px 24px;border-radius:8px;min-height:56px;cursor:pointer;border:2px solid transparent}
+.btn-glowny{background:var(--morski);color:#fff}
+.btn-glowny:hover{background:var(--morski-h)}
+.btn-jasny{background:#fff;color:var(--niebieski-c)}
+.btn-jasny:hover{background:#E8ECF6}
+
+/* hero */
+.hero{position:relative;min-height:calc(100svh - 73px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:#0A1A4F}
+.hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero picture img{object-position:50% 40%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,26,79,.15) 0%,rgba(10,26,79,.25) 35%,rgba(10,26,79,.88) 100%)}
+.hero-poludniki{position:absolute;right:-140px;top:-120px;width:620px;height:620px;color:rgba(255,255,255,.28);z-index:1;pointer-events:none}
+.hero-in{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:48px 20px 56px;width:100%}
+.hero h1{font-size:clamp(34px,5.2vw,64px);max-width:20ch;text-wrap:balance}
+.nw{white-space:nowrap}
+.hero .lead{font-size:clamp(19px,1.7vw,23px);max-width:40ch;margin:20px 0 30px;color:#EEF1FA}
+.hero-akcje{display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center}
+.hero-tel{color:#fff;font-weight:700;font-size:21px;text-decoration:none;display:inline-flex;align-items:center;gap:10px;padding:10px 0}
+.hero-tel:hover{text-decoration:underline}
+@media (max-width:700px){
+ .hero{min-height:calc(100svh - 73px)}
+ .hero-poludniki{width:380px;height:380px;right:-150px;top:-110px}
+ .hero-in{padding:28px 16px 30px}
+ .hero h1{font-size:clamp(30px,8.6vw,38px)}
+ .hero .lead{font-size:18px;margin:14px 0 24px}
+ .hero-akcje .btn{width:100%;justify-content:center}
+ .hero-tel{font-size:20px;padding:6px 0}
+}
+@media (max-width:700px) and (max-height:700px){.hero h1{font-size:28px}.hero .lead{font-size:17px;margin:12px 0 20px}}
+
+/* sekcje */
+.sek{padding:88px 0}
+.sek-szara{background:var(--tlo2)}
+.glowa{display:flex;gap:16px;align-items:flex-start;margin-bottom:34px;max-width:780px}
+.glowa svg{width:42px;height:42px;color:var(--niebieski);flex:none;margin-top:2px}
+.glowa p{color:var(--szary);margin:12px 0 0;font-size:19px}
+@media (max-width:700px){.sek{padding:60px 0}.glowa svg{width:34px;height:34px}}
+
+/* sprawdzone */
+.spr{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.spr-lista{list-style:none;margin:26px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:4px 28px}
+.spr-lista li{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--linia);font-weight:700}
+.spr-lista li svg{width:24px;height:24px;color:var(--morski);flex:none;margin-top:2px}
+.spr-foto{position:relative}
+.spr-foto img{border-radius:10px;width:100%;aspect-ratio:4/3;object-fit:cover}
+.spr-foto figcaption{font-size:15px;color:var(--szary);margin-top:10px}
+.cytat{font-size:clamp(21px,2vw,25px);line-height:1.45;color:var(--niebieski-c);margin:0;border:0;padding:0}
+.cytat footer{font-size:17px;color:var(--szary);margin-top:12px}
+@media (max-width:900px){.spr{grid-template-columns:1fr;gap:36px}}
+@media (max-width:520px){.spr-lista{grid-template-columns:1fr}}
+
+/* tor kart */
+.tor-wrap{position:relative}
+.tor{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px max(20px,calc((100vw - 1200px)/2 + 20px)) 18px;scrollbar-width:thin;cursor:grab}
+.tor.ciag{cursor:grabbing;scroll-snap-type:none;user-select:none}
+.tor::-webkit-scrollbar{height:8px}.tor::-webkit-scrollbar-thumb{background:#B8C0D6;border-radius:8px}
+.karta{flex:0 0 min(360px,82vw);scroll-snap-align:start;background:#fff;border:1px solid var(--linia);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.karta img{width:100%;aspect-ratio:4/3;object-fit:cover;pointer-events:none}
+.karta-t{padding:20px 22px 24px;display:flex;flex-direction:column;flex:1}
+.karta-t p{color:var(--szary);font-size:17px;margin:8px 0 14px}
+.termin{display:inline-block;font-weight:700;font-size:16px;color:var(--niebieski);margin-bottom:6px}
+.termin.zapisy{color:var(--morski)}
+.karta-t a{margin-top:auto;font-weight:700;text-decoration:none;display:inline-flex;gap:8px;align-items:center}
+.karta-t a:hover{text-decoration:underline}
+.tor-nav{display:flex;gap:10px;justify-content:flex-end;max-width:1200px;margin:0 auto;padding:0 20px 14px}
+.tor-nav button{width:52px;height:52px;border-radius:50%;border:1px solid #B8C0D6;background:#fff;cursor:pointer;color:var(--niebieski-c);display:flex;align-items:center;justify-content:center}
+.tor-nav button:hover{background:var(--tlo2)}
+.tor-nav svg{width:22px;height:22px}
+
+/* rodzaje wyjazdow - ciemna */
+.ciemna{background:var(--niebieski-c);color:#fff;position:relative;overflow:hidden}
+.ciemna h2{color:#fff}
+.ciemna .glowa p{color:#C9D1EC}
+.ciemna .glowa svg{color:#7F9BFF}
+.ciemna-pol{position:absolute;left:-220px;bottom:-260px;width:640px;height:640px;color:rgba(127,155,255,.16);pointer-events:none}
+.rodzaje{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid rgba(255,255,255,.2);position:relative}
+.rodzaj{padding:28px 26px 30px 0;border-right:1px solid rgba(255,255,255,.2)}
+.rodzaj+.rodzaj{padding-left:26px}
+.rodzaj:last-child{border-right:0}
+.rodzaj h3{font-size:23px;margin-bottom:10px}
+.rodzaj p{color:#D3D9F0;font-size:17px}
+.rodzaj a{color:#fff;font-weight:700}
+@media (max-width:1000px){.rodzaje{grid-template-columns:1fr 1fr}.rodzaj:nth-child(2){border-right:0}.rodzaj:nth-child(3){padding-left:0}.rodzaj:nth-child(n+3){border-top:1px solid rgba(255,255,255,.2)}}
+@media (max-width:600px){.rodzaje{grid-template-columns:1fr}.rodzaj,.rodzaj+.rodzaj{padding:24px 0;border-right:0;border-top:1px solid rgba(255,255,255,.2)}}
+
+/* o mnie */
+.omnie{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:56px;align-items:start}
+.omnie-zdj{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.omnie-zdj img{border-radius:10px;width:100%;object-fit:cover}
+.omnie-zdj .szer{grid-column:1/-1;aspect-ratio:1600/596}
+.omnie-zdj figure{margin:0}
+.omnie-zdj figcaption{font-size:15px;color:var(--szary);margin-top:8px}
+.wyr{list-style:none;padding:0;margin:22px 0 0}
+.wyr li{padding:12px 0;border-top:1px solid var(--linia)}
+.wyr b{display:block;color:var(--niebieski-c)}
+@media (max-width:900px){.omnie{grid-template-columns:1fr;gap:36px}}
+
+/* opinie */
+.opinie{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.opinia{margin:0;padding:26px 0 0;border-top:3px solid var(--niebieski)}
+.opinia p{font-size:19px;margin:0 0 14px}
+.opinia footer{color:var(--szary);font-size:16px;font-weight:700}
+@media (max-width:900px){.opinie{grid-template-columns:1fr;gap:22px}}
+
+/* faq */
+.faq{max-width:860px}
+.faq details{border-bottom:1px solid var(--linia)}
+.faq summary{list-style:none;cursor:pointer;font-weight:700;font-size:20px;padding:20px 44px 20px 0;position:relative;color:var(--niebieski-c)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:8px;top:50%;width:14px;height:14px;border-right:3px solid var(--niebieski);border-bottom:3px solid var(--niebieski);transform:translateY(-70%) rotate(45deg)}
+.faq details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+.faq details p{color:var(--szary);margin:0 0 20px}
+
+/* kontakt */
+.kontakt{display:grid;grid-template-columns:1fr 1.15fr;gap:56px}
+.k-dane{font-size:19px}
+.k-dane a.duzy{display:flex;align-items:center;gap:12px;font-size:clamp(24px,2.6vw,30px);font-weight:700;text-decoration:none;color:var(--niebieski-c);margin:6px 0 2px}
+.k-dane a.duzy svg{width:26px;height:26px;color:var(--morski)}
+.k-dane .m{color:var(--szary);font-size:16px;margin:0 0 18px}
+.form{background:var(--tlo2);border-radius:12px;padding:30px}
+.form label{display:block;font-weight:700;margin:0 0 6px}
+.form input,.form textarea,.form select{width:100%;font:inherit;font-size:18px;padding:13px 14px;border:2px solid #B8C0D6;border-radius:8px;background:#fff;color:var(--tekst);margin-bottom:18px}
+.form input:focus,.form textarea:focus,.form select:focus{border-color:var(--niebieski);outline:none}
+.form .dwa{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+.form .zgoda{display:flex;gap:10px;font-weight:400;font-size:15px;color:var(--szary);align-items:flex-start}
+.form .zgoda input{width:22px;height:22px;flex:none;margin:2px 0 0}
+.form .btn{border:0;width:100%;justify-content:center;margin-top:18px}
+.form-info{font-size:15px;color:var(--szary);margin:12px 0 0}
+@media (max-width:900px){.kontakt{grid-template-columns:1fr;gap:36px}}
+@media (max-width:520px){.form{padding:22px 16px}.form .dwa{grid-template-columns:1fr}}
+
+/* stopka */
+.stopka{background:#0A1A4F;color:#C9D1EC;padding:54px 0 30px;font-size:16px}
+.stopka a{color:#fff}
+.st-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+.st-grid h3{color:#fff;font-size:18px;margin-bottom:10px}
+.st-grid ul{list-style:none;padding:0;margin:0}
+.st-grid li{padding:4px 0}
+.st-grid li a{text-decoration:none}
+.st-grid li a:hover{text-decoration:underline}
+.st-dol{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.18);margin-top:36px;padding-top:22px;font-size:15px}
+@media (max-width:800px){.st-grid{grid-template-columns:1fr 1fr}.st-grid>div:first-child{grid-column:1/-1}}
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+</style>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <defs>
+  <symbol id="globus" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M33 6.5a25.5 25.5 0 1 0 0 51"/><path d="M33 6.5c-9 6-13 15.5-13 25.5s4 19.5 13 25.5"/><path d="M33 6.5c-3 8-4 16-4 25.5s1 17.5 4 25.5"/><path d="M8.5 22.5h21M7.5 32h21M8.5 41.5h21"/></g><g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="45" cy="10.5" rx="3.6" ry="4.6"/><path d="M45 15.5v16.5h12"/><path d="M43 37.5a11 11 0 1 0 12.5 9"/><path d="M45 32l7.5 13h5"/></g></symbol>
+  <symbol id="pol" viewBox="0 0 200 200"><g fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="100" cy="100" r="98"/><ellipse cx="100" cy="100" rx="70" ry="98"/><ellipse cx="100" cy="100" rx="38" ry="98"/><path d="M100 2v196M2 100h196"/><path d="M14 52h172M14 148h172"/><path d="M40 22h120M40 178h120"/></g></symbol>
+  <symbol id="znacznik" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5c-3.6 2.6-5 6-5 9.5s1.4 6.9 5 9.5"/><path d="M7.6 12.4l3 3 6-6.4"/></g></symbol>
+  <symbol id="tel" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></symbol>
+  <symbol id="strz" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="strzl" viewBox="0 0 24 24"><path d="M19 12H6M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+ </defs>
+</svg>
+
+<header class="top">
+ <div class="top-in">
+  <a class="logo" href="#start" aria-label="Accessible Poland Tours - strona główna">
+   <svg aria-hidden="true"><use href="#globus"/></svg>
+   <span class="logo-t"><b>Accessible Poland Tours</b><small>biuro podróży bez barier</small></span>
+  </a>
+  <nav class="nav" aria-label="Główna">
+   <a href="#start" class="akt" aria-current="page">Start</a>
+   <a href="#wyjazdy">Wyjazdy</a>
+   <a href="#rodzaje">Oferta</a>
+   <a href="#o-mnie">O mnie</a>
+   <a href="#opinie">Opinie</a>
+   <a href="#kontakt">Kontakt</a>
+  </nav>
+  <a class="jezyk" href="#start" lang="en" title="English version">EN</a>
+  <a class="top-tel" href="tel:+48502522165"><svg class="ik" aria-hidden="true"><use href="#tel"/></svg><span>502 522 165</span></a>
+  <button class="burger" type="button" aria-expanded="false" aria-controls="menu-mob" aria-label="Otwórz menu"><span></span><span></span><span></span></button>
+ </div>
+ <div class="menu-mob" id="menu-mob" hidden>
+  <nav aria-label="Menu mobilne">
+   <a href="#wyjazdy">Najbliższe wyjazdy</a>
+   <a href="#rodzaje">Oferta</a>
+   <a href="#o-mnie">O mnie</a>
+   <a href="#opinie">Opinie</a>
+   <a href="#pytania">Pytania i odpowiedzi</a>
+   <a href="#kontakt">Kontakt</a>
+   <a href="#start" lang="en">English</a>
+  </nav>
+  <a class="btn btn-glowny" href="tel:+48502522165"><svg class="ik" aria-hidden="true"><use href="#tel"/></svg>Zadzwoń: 502 522 165</a>
+ </div>
+</header>
+
+<main id="tresc">
+<section class="hero" id="start">
+ <picture>
+  <source media="(max-width:700px)" srcset="img/hero-m-640.webp 640w, img/hero-m-1080.webp 1080w" sizes="100vw">
+  <img src="img/hero-1600.webp" srcset="img/hero-960.webp 960w, img/hero-1600.webp 1600w, img/hero-2560.webp 2560w" sizes="100vw" width="2560" height="1440" alt="Koloseum w Rzymie w słońcu" fetchpriority="high">
+ </picture>
+ <svg class="hero-poludniki" aria-hidden="true"><use href="#pol"/></svg>
+ <div class="hero-in">
+  <h1>Biuro podróży <span class="nw">dla osób</span> z&nbsp;niepełnosprawnością</h1>
+  <p class="lead">Rzym, Paryż, Malta czy Teneryfa - hotele, łazienki, podjazdy i transport sprawdzamy, zanim pojedziesz. Zamiast turnusu prawdziwe wakacje.</p>
+  <div class="hero-akcje">
+   <a class="btn btn-glowny" href="#wyjazdy">Zobacz najbliższe wyjazdy <svg class="ik" aria-hidden="true"><use href="#strz"/></svg></a>
+   <a class="hero-tel" href="tel:+48502522165"><svg class="ik" aria-hidden="true"><use href="#tel"/></svg>502 522 165</a>
+  </div>
+ </div>
+</section>
+
+<section class="sek" id="sprawdzone">
+ <div class="wrap spr">
+  <div>
+   <div class="glowa"><svg aria-hidden="true"><use href="#globus"/></svg><div><h2>Dostępność prawdziwa, a&nbsp;nie deklarowana</h2>
+   <p>Napis "hotel dla niepełnosprawnych" w katalogu niewiele znaczy. Zanim wpiszemy miejsce do programu, sprawdzamy je pod Twoje potrzeby.</p></div></div>
+   <ul class="spr-lista">
+    <li><svg aria-hidden="true"><use href="#znacznik"/></svg>Pokoje i łazienki bez progów</li>
+    <li><svg aria-hidden="true"><use href="#znacznik"/></svg>Uchwyty i szerokie drzwi</li>
+    <li><svg aria-hidden="true"><use href="#znacznik"/></svg>Transport dostosowany do wózków</li>
+    <li><svg aria-hidden="true"><use href="#znacznik"/></svg>Podjazdy i windy na trasie zwiedzania</li>
+    <li><svg aria-hidden="true"><use href="#znacznik"/></svg>Dostępne toalety po drodze</li>
+    <li><svg aria-hidden="true"><use href="#znacznik"/></svg>Tempo z przerwami na odpoczynek</li>
+    <li><svg aria-hidden="true"><use href="#znacznik"/></svg>Asysta na lotnisku i przesiadkach</li>
+    <li><svg aria-hidden="true"><use href="#znacznik"/></svg>Pilot na całej trasie</li>
+   </ul>
+  </div>
+  <figure class="spr-foto">
+   <img src="img/malta.webp" width="800" height="600" alt="Kolorowe łodzie w porcie na Malcie" loading="lazy">
+   <figcaption>Malta, październik 2026 - zdjęcie z naszego wyjazdu</figcaption>
+  </figure>
+ </div>
+</section>
+
+<section class="sek sek-szara" id="wyjazdy">
+ <div class="wrap">
+  <div class="glowa"><svg aria-hidden="true"><use href="#globus"/></svg><div><h2>Najbliższe wyjazdy i nasze kierunki</h2>
+  <p>Wycieczki grupowe z polskim pilotem. Zapisy przyjmujemy nawet 6-7 miesięcy wcześniej, bo dostępnych pokoi jest zawsze mniej.</p></div></div>
+ </div>
+ <div class="tor-nav"><button type="button" data-kier="-1" aria-label="Poprzednie"><svg aria-hidden="true"><use href="#strzl"/></svg></button><button type="button" data-kier="1" aria-label="Następne"><svg aria-hidden="true"><use href="#strz"/></svg></button></div>
+ <div class="tor" data-tor>
+  <article class="karta"><img src="img/paryz.webp" width="800" height="600" alt="Wieża Eiffla widziana od dołu, między drzewami" loading="lazy"><div class="karta-t"><span class="termin zapisy">18-24 sierpnia 2027 - zbieramy chętnych</span><h3>Paryż</h3><p>Wieża Eiffla, Luwr i bulwary nad Sekwaną w spokojnym tempie, z hotelem przystosowanym dla wózków.</p><a href="#kontakt">Zapytaj o miejsce <svg class="ik" aria-hidden="true"><use href="#strz"/></svg></a></div></article>
+  <article class="karta"><img src="img/amalfi.webp" width="750" height="562" alt="Plaża i białe domy na wybrzeżu Amalfi" loading="lazy"><div class="karta-t"><span class="termin zapisy">Zbieramy chętnych</span><h3>Neapol i Capri</h3><p>Neapol, wyspa Capri i wybrzeże Amalfi, uważane za jedno z najpiękniejszych na świecie.</p><a href="#kontakt">Zapytaj o termin <svg class="ik" aria-hidden="true"><use href="#strz"/></svg></a></div></article>
+  <article class="karta"><img src="img/rzym.webp" width="800" height="600" alt="Łuki Koloseum w Rzymie" loading="lazy"><div class="karta-t"><span class="termin">Wyjazd odbył się w listopadzie 2026</span><h3>Rzym</h3><p>Koloseum, Watykan i rzymskie place - trasa ułożona tak, żeby ominąć schody i bruk tam, gdzie się da.</p><a href="#kontakt">Zapytaj o kolejny termin <svg class="ik" aria-hidden="true"><use href="#strz"/></svg></a></div></article>
+  <article class="karta"><img src="img/malta.webp" width="800" height="600" alt="Łodzie luzzu w porcie Marsaxlokk na Malcie" loading="lazy"><div class="karta-t"><span class="termin">Wyjazd odbył się w październiku 2026</span><h3>Malta</h3><p>Valletta, Mdina - Miasto Ciszy, klify Dingli i rybackie Marsaxlokk. Hotel czterogwiazdkowy z dostosowanymi łazienkami.</p><a href="#kontakt">Zapytaj o kolejny termin <svg class="ik" aria-hidden="true"><use href="#strz"/></svg></a></div></article>
+  <article class="karta"><img src="img/sewilla.webp" width="800" height="600" alt="Plac Hiszpański w Sewilli" loading="lazy"><div class="karta-t"><span class="termin">Wyjazd odbył się w październiku 2026</span><h3>Sewilla</h3><p>Andaluzja w rytmie flamenco i tapas: Plac Hiszpański, katedra i stare miasto.</p><a href="#kontakt">Zapytaj o kolejny termin <svg class="ik" aria-hidden="true"><use href="#strz"/></svg></a></div></article>
+  <article class="karta"><img src="img/barcelona.webp" width="800" height="600" alt="Barcelona o zachodzie słońca, widok ze wzgórza Tibidabo" loading="lazy"><div class="karta-t"><span class="termin">Kierunek, w który jeździmy</span><h3>Barcelona</h3><p>Gaudí, bulwary nad morzem i kataloński klimat - miasto, które dobrze radzi sobie z dostępnością.</p><a href="#kontakt">Zapytaj o termin <svg class="ik" aria-hidden="true"><use href="#strz"/></svg></a></div></article>
+  <article class="karta"><img src="img/ateny.webp" width="800" height="600" alt="Partenon na Akropolu w Atenach" loading="lazy"><div class="karta-t"><span class="termin">Kierunek, w który jeździmy</span><h3>Ateny i okolice</h3><p>Akropol, Plaka i greckie wybrzeże - z planem dopasowanym do możliwości grupy.</p><a href="#kontakt">Zapytaj o termin <svg class="ik" aria-hidden="true"><use href="#strz"/></svg></a></div></article>
+ </div>
+</section>
+
+<section class="sek ciemna" id="rodzaje">
+ <svg class="ciemna-pol" aria-hidden="true"><use href="#pol"/></svg>
+ <div class="wrap">
+  <div class="glowa"><svg aria-hidden="true"><use href="#globus"/></svg><div><h2>Pojedź z grupą, sam albo na wczasy</h2>
+  <p>Wszyscy są mile widziani - także osoby sprawne i seniorzy. Nie potrzebujesz orzeczenia, żeby jechać z nami.</p></div></div>
+  <div class="rodzaje">
+   <div class="rodzaj"><h3>Wycieczki zagraniczne</h3><p>Gotowe programy po Europie z pilotem, sprawdzonym transportem i hotelami z łazienkami bez progów.</p><a href="#wyjazdy">Zobacz wyjazdy</a></div>
+   <div class="rodzaj"><h3>Wczasy zagraniczne</h3><p>Umbria, Costa del Sol, Teneryfa. Hotel z basenem i dostosowanym pokojem, dojazd własny, odpoczynek we własnym rytmie.</p><a href="#kontakt">Zapytaj o wczasy</a></div>
+   <div class="rodzaj"><h3>Wyjazdy szyte na miarę</h3><p>Mówisz, dokąd, za ile i co jest dla Ciebie ważne. Dostajesz szczegółowy plan z kosztami, zanim cokolwiek zarezerwujemy.</p><a href="#kontakt">Opisz swój wyjazd</a></div>
+   <div class="rodzaj"><h3>Dla grup</h3><p>Fundacje, stowarzyszenia, domy pomocy i szkoły. Transport, noclegi bez barier, a w razie potrzeby opiekunowie i asystenci.</p><a href="#kontakt">Zapytaj o wyjazd grupowy</a></div>
+  </div>
+ </div>
+</section>
+
+<section class="sek" id="o-mnie">
+ <div class="wrap omnie">
+  <div class="omnie-zdj">
+   <figure class="szer"><img class="szer" src="img/grupa-10-lat.webp" width="1600" height="596" alt="Kolaż zdjęć z wyjazdów grupowych: Paryż, Barcelona, Lizbona, Madryt, Sintra" loading="lazy"><figcaption>Nasze grupy w Paryżu, Barcelonie, Lizbonie, Madrycie i Sintrze</figcaption></figure>
+   <figure><img src="img/lady-d-2024.webp" width="768" height="1024" alt="Statuetka laureatki konkursu Mazowiecka Lady D. 2024" loading="lazy" style="aspect-ratio:3/4"><figcaption>Mazowiecka Lady D. 2024</figcaption></figure>
+   <figure><img src="img/teneryfa.webp" width="800" height="600" alt="Plaża Las Teresitas na Teneryfie" loading="lazy" style="aspect-ratio:3/4"><figcaption>Teneryfa - wczasy z dojazdem własnym</figcaption></figure>
+  </div>
+  <div>
+   <div class="glowa" style="margin-bottom:22px"><svg aria-hidden="true"><use href="#globus"/></svg><div><h2>Podróżuję, więc rozumiem</h2></div></div>
+   <blockquote class="cytat">"Od lat zwiedzam świat, poruszając się o kuli. Wiem, co to znaczy natknąć się na schody tam, gdzie miała być winda."<footer>Małgorzata Tokarska, założycielka Accessible Poland Tours</footer></blockquote>
+   <p style="margin-top:22px">Accessible Poland Tours to pierwsze w Polsce internetowe biuro podróży dla osób starszych i z niepełnosprawnością. Nie robię wyjazdów rehabilitacyjnych. Robię wakacje, w których jest miejsce na zwiedzanie, lokalną kuchnię i dobrą atmosferę - a wszystko, co może przeszkodzić, sprawdzam wcześniej.</p>
+   <ul class="wyr">
+    <li><b>Mazowiecka Lady D. 2024</b>laureatka w kategorii życie zawodowe</li>
+    <li><b>Super Lodołamacz 2021</b>konkurs Lodołamacze, wyróżnienie dla biura</li>
+    <li><b>Człowiek bez barier 2009</b>wyróżnienie Stowarzyszenia Integracja</li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section class="sek sek-szara" id="opinie">
+ <div class="wrap">
+  <div class="glowa"><svg aria-hidden="true"><use href="#globus"/></svg><div><h2>Co mówią uczestnicy</h2></div></div>
+  <div class="opinie">
+   <blockquote class="opinia"><p>"Byłam z mężem niepełnosprawnym i synem. Wszystko było doskonale zorganizowane i dopracowane pod kątem osób niepełnosprawnych."</p><footer>Anna Drafz</footer></blockquote>
+   <blockquote class="opinia"><p>"Był to nasz pierwszy lot samolotem i tylko dzięki Pani Małgosi wszystko odbyło się bezproblemowo. Hotel dostosowany do osób na wózkach."</p><footer>Ewa, Piotr, Klaudia - Majorka</footer></blockquote>
+   <blockquote class="opinia" lang="en"><p>"Margaret understood everyone's needs right from the start and was there for us both before and during the trip."</p><footer>Tania - grupa 8 osób, Kraków</footer></blockquote>
+  </div>
+ </div>
+</section>
+
+<section class="sek" id="pytania">
+ <div class="wrap">
+  <div class="glowa"><svg aria-hidden="true"><use href="#globus"/></svg><div><h2>O co pytają klienci</h2></div></div>
+  <div class="faq">
+   <details><summary>Jestem na wózku. Czy mogę jechać sam albo sama?</summary><p>Tak, jeśli radzisz sobie samodzielnie z codziennymi czynnościami, takimi jak mycie czy ubieranie się. Osoby podróżujące same łączymy w pokojach (tej samej płci), jeśli obie strony się zgodzą.</p></details>
+   <details><summary>Czy biuro zapewnia asystentów?</summary><p>Pomagamy zorganizować asystenta na cały wyjazd albo tylko do pomocy na miejscu, na przykład przy pchaniu wózka. Pomoc na miejscu kosztuje zwykle około 8-10 euro od osoby.</p></details>
+   <details><summary>Kiedy najlepiej się zapisać?</summary><p>Jak najwcześniej - zapisy przyjmujemy nawet 6-7 miesięcy przed wyjazdem. Miejsce potwierdza wpłata zaliczki.</p></details>
+   <details><summary>Co, jeśli wycieczka nie dojdzie do skutku?</summary><p>Zwracamy pieniądze albo proponujemy inny wyjazd. Jesteśmy licencjonowanym biurem podróży wpisanym do rejestru organizatorów turystyki (nr 1197).</p></details>
+  </div>
+ </div>
+</section>
+
+<section class="sek sek-szara" id="kontakt">
+ <div class="wrap kontakt">
+  <div class="k-dane">
+   <div class="glowa" style="margin-bottom:22px"><svg aria-hidden="true"><use href="#globus"/></svg><div><h2>Zaplanujmy Twoje wakacje bez barier</h2></div></div>
+   <p>Napisz, dokąd chcesz pojechać i czego potrzebujesz. Odpowiadamy z propozycją i kosztami.</p>
+   <a class="duzy" href="tel:+48502522165"><svg aria-hidden="true"><use href="#tel"/></svg>502 522 165</a>
+   <p class="m">telefon komórkowy</p>
+   <a class="duzy" href="tel:+48225187983"><svg aria-hidden="true"><use href="#tel"/></svg>22 518 79 83</a>
+   <p class="m">biuro</p>
+   <p><a href="mailto:office@accessibletour.pl" style="font-weight:700">office@accessibletour.pl</a></p>
+   <p class="m">Accessible Poland Tours, Małgorzata Tokarska, Warszawa<br>NIP 522-130-43-33, rejestr organizatorów turystyki nr 1197</p>
+  </div>
+  <form class="form" onsubmit="event.preventDefault();this.querySelector('.form-info').textContent='To podgląd - formularz zacznie wysyłać wiadomości na docelowej stronie.'">
+   <div class="dwa">
+    <div><label for="f-imie">Imię i nazwisko</label><input id="f-imie" autocomplete="name" required></div>
+    <div><label for="f-tel">Telefon</label><input id="f-tel" type="tel" autocomplete="tel"></div>
+   </div>
+   <label for="f-mail">E-mail</label><input id="f-mail" type="email" autocomplete="email" required>
+   <label for="f-wyj">Czego dotyczy zapytanie</label>
+   <select id="f-wyj"><option>Paryż, sierpień 2027</option><option>Neapol i Capri</option><option>Wczasy zagraniczne</option><option>Wyjazd szyty na miarę</option><option>Wyjazd dla grupy</option><option>Inne</option></select>
+   <label for="f-tr">Twoje potrzeby i pytania</label><textarea id="f-tr" rows="4" placeholder="Np. wózek elektryczny, potrzebny pokój z prysznicem bez brodzika, jadę z opiekunem"></textarea>
+   <label class="zgoda"><input type="checkbox" required> Zgadzam się na przetwarzanie danych w celu odpowiedzi na zapytanie.</label>
+   <button class="btn btn-glowny" type="submit">Wyślij zapytanie <svg class="ik" aria-hidden="true"><use href="#strz"/></svg></button>
+   <p class="form-info" aria-live="polite"></p>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer class="stopka">
+ <div class="wrap">
+  <div class="st-grid">
+   <div><h3>Accessible Poland Tours</h3><p>Biuro podróży dla osób z niepełnosprawnością i seniorów. Wycieczki zagraniczne, wczasy i wyjazdy szyte na miarę.</p></div>
+   <div><h3>Oferta</h3><ul><li><a href="#wyjazdy">Wycieczki zagraniczne</a></li><li><a href="#rodzaje">Wczasy zagraniczne</a></li><li><a href="#rodzaje">Wyjazdy szyte na miarę</a></li><li><a href="#rodzaje">Dla grup</a></li></ul></div>
+   <div><h3>Kontakt</h3><ul><li><a href="tel:+48502522165">502 522 165</a></li><li><a href="tel:+48225187983">22 518 79 83</a></li><li><a href="mailto:office@accessibletour.pl">office@accessibletour.pl</a></li></ul></div>
+  </div>
+  <div class="st-dol"><span>© 2026 Accessible Poland Tours - Polityka prywatności</span><a class="wylinka-badge" href="https://wylinka.pl/?utm_source=accessibletour.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a></div>
+ </div>
+</footer>
+<script>
+(function(){
+ var b=document.querySelector('.burger'),m=document.getElementById('menu-mob');
+ b.addEventListener('click',function(){var o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',!o);b.setAttribute('aria-label',o?'Otwórz menu':'Zamknij menu');m.hidden=o;});
+ m.addEventListener('click',function(e){if(e.target.closest('a')){m.hidden=true;b.setAttribute('aria-expanded','false');}});
+ var t=document.querySelector('[data-tor]');
+ document.querySelectorAll('[data-kier]').forEach(function(x){x.addEventListener('click',function(){var k=t.querySelector('.karta');t.scrollBy({left:(k.offsetWidth+22)*+x.dataset.kier,behavior:'smooth'});});});
+ var d=false,sx=0,sl=0,ruch=0;
+ t.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;d=true;ruch=0;sx=e.clientX;sl=t.scrollLeft;});
+ window.addEventListener('pointermove',function(e){if(!d)return;var dx=e.clientX-sx;if(Math.abs(dx)>4){t.classList.add('ciag');ruch=1;}t.scrollLeft=sl-dx;});
+ window.addEventListener('pointerup',function(){if(!d)return;d=false;t.classList.remove('ciag');});
+ t.addEventListener('click',function(e){if(ruch){e.preventDefault();e.stopPropagation();ruch=0;}},true);
+})();
+</script>
+</body>
+</html>
